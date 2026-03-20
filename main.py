@@ -55,12 +55,6 @@ async def download_video_endpoint(url: str, request: Request, background_tasks: 
         'format_sort': ['vcodec:h264', 'ext:mp4:m4a'],
         'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
         'merge_output_format': 'mp4',
-        'postprocessor_args': [
-            '-vcodec', 'libx264',
-            '-acodec', 'aac',
-            '-pix_fmt', 'yuv420p',
-            '-movflags', '+faststart',
-        ],
         'quiet': True,
         'no_warnings': True,
     }
